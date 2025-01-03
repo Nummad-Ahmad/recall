@@ -15,7 +15,7 @@ const DialogflowMessenger = () => {
     };
   }, []);
   const h1Style = {
-    marginTop: '20px',
+    marginTop: '10px',
     fontFamily: 'sans-serif',
     cursor: 'pointer',
     color: isOn ? 'white' : 'black',
@@ -38,13 +38,18 @@ const DialogflowMessenger = () => {
         <h1 style={h1Style}>Recall</h1>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px'}}>
           <h1 style={h1Style}>About</h1>
-          <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
+          <div onClick={()=> setIsOn(!isOn)} style={{width: '30px', height: '30px', cursor: 'pointer'}}>
+          {
+            isOn ? <MdLightMode size={25} color={`${isOn ? 'white' : 'black'}`} /> : <MdDarkMode size={20} color={`${isOn ? 'white' : 'black'}`} />
+          }
+          </div>
+          {/* <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
             <MdLightMode size={20} color={`${isOn ? 'white' : 'black'}`} />
             <div className={`${isOn ? style.switchon : style.switchoff}`} onClick={() =>{console.log(isOn); setIsOn(!isOn)}}>
               <div className={`${isOn ? style.ballon : style.balloff}`} />
             </div>
             <MdDarkMode size={20} color={`${isOn ? 'white' : 'black'}`} />
-          </div>
+          </div> */}
         </div>
       </div>
       <div>
