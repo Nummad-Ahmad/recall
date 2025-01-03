@@ -32,7 +32,7 @@ const DialogflowMessenger = () => {
         left: '50%',
         transform: 'translateX(-50%)',
         top: '0px',
-        width: '60%',
+        width: '80%',
         maxWidth: '1440px'
       }}>
         <h1 style={h1Style}>Recall</h1>
@@ -90,7 +90,7 @@ const DialogflowMessenger = () => {
   left: 50%;
   transform: translateX(-50%);
   top: 30px;
-  width: 60%;
+  width: 80%;
   max-width: 1440px;
 }
 
